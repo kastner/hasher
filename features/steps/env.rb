@@ -3,6 +3,5 @@ require 'cucumber'
 
 require 'test/unit/assertions'
 require 'test/spec'
-require 'matchy'
 
 World(Test::Unit::Assertions)
