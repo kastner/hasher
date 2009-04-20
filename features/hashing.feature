@@ -21,4 +21,18 @@ Feature: Consistent Hashing
     Given a hash container size of 1009
     When the method hash is invoked with O*259631T
     Then the number 789 is returned
-    
+  
+  Scenario Outline: Hashing a bunch
+    Given a hash container size of <size>
+    When the method hash is invoked with <input>
+    Then the number <output> is returned
+  
+    Examples:
+      | size  | input               | output  |
+      | 90917 | 17614               | 1       |
+      | 1009  | O*259631T           | 789     |
+      | 1009  | O*519938            | 1       |
+      | 1009  | C*375193            | 936     |
+      | 1009  | O*576156            | 1001    |
+      | 1009  | C*535806            | 814     |
+      | 55711 | 071529PG0013798*01  | 0       |

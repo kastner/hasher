@@ -1,3 +1,5 @@
+require 'cucumber/formatter/unicode'
+
 Given /^a hash container size of (\d+)$/ do |size|
   @hasher = Hasher.new(size.to_i)
 end
