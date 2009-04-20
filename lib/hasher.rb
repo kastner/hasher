@@ -6,21 +6,15 @@ class Hasher
     @size = size
   end
   
-  def hash(input)
-    rcx = 0
-    input.length.times {|i|
-      rdx = rcx
-      rdx <<= 0x7
-      rax = input[i]
-      rdx ^= rax
-      rax = rcx
-      rax >>= 0x15
-      rax &= 0x1fc
-      rcx = rdx
-      rcx ^= rax
-    }
-    rcx &= 0x7fffffff
-    rcx % @size
+  def hash(input, length=input.length)
+    hash = 0
+    length.times do |i|
+      new_hash = hash << 0x7 ^ input[i]
+      overflow = hash >> 0x15 & 0x1fc
+      hash = new_hash ^ overflow
+    end
+    hash &= 0x7fffffff
+    hash % @size
   end
   
   class NonPrimeContainer < StandardError; end
