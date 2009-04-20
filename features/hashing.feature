@@ -11,3 +11,14 @@ Feature: Consistent Hashing
     Given a hash container size of 90917
     When the method hash is invoked with 17614
     Then the number 1 is returned
+
+  Scenario: Hashing Redux
+    Given a hash container size of 1009
+    When the method hash is invoked with O*519938
+    Then the number 1 is returned
+      
+  Scenario: Hashing The Third
+    Given a hash container size of 1009
+    When the method hash is invoked with O*259631T
+    Then the number 789 is returned
+    
