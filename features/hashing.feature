@@ -24,11 +24,11 @@ Feature: Consistent Hashing
   
   Scenario Outline: Hashing a bunch
     Given a hash container size of <size>
-    When the method hash is invoked with <input>
-    Then the number <output> is returned
+    When the method hash is invoked with <key>
+    Then the number <bucket> is returned
   
     Examples:
-      | size  | input               | output  |
+      | size  | key                 | bucket  |
       | 90917 | 17614               | 1       |
       | 1009  | O*259631T           | 789     |
       | 1009  | O*519938            | 1       |
