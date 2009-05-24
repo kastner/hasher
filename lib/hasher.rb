@@ -1,8 +1,5 @@
-require File.expand_path(File.dirname(__FILE__) + '/../lib/primes')
-
 class Hasher
   def initialize(size)
-    raise NonPrimeContainer unless FIRST_1K_PRIMES.include?(size)
     @size = size
   end
   

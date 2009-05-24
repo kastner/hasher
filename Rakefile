@@ -7,6 +7,7 @@ begin
     gemspec.homepage = "http://github.com/kastner/hasher"
     gemspec.description = "A library that uses the same hash function as AppGen 4GL"
     gemspec.authors = ["Erik Kastner"]
+    gemspec.rubyforge_project = "hasher"
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
