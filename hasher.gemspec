@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{hasher}
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Erik Kastner"]
-  s.date = %q{2009-05-23}
+  s.date = %q{2009-05-24}
   s.description = %q{A library that uses the same hash function as AppGen 4GL}
   s.email = %q{kastner@gmail.com}
   s.extra_rdoc_files = [
@@ -20,8 +20,9 @@ Gem::Specification.new do |s|
      "features/hashing.feature",
      "features/steps/env.rb",
      "features/steps/hasher_steps.rb",
+     "hasher.gemspec",
      "lib/hasher.rb",
-     "lib/primes.rb",
+     "pkg/hasher-0.1.0.gem",
      "test/spec_hasher.rb"
   ]
   s.homepage = %q{http://github.com/kastner/hasher}
